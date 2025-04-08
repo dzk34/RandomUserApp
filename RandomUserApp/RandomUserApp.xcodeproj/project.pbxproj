@@ -16,6 +16,8 @@
 		29F945B62DA54BB10069CE3E /* RandomUserAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945B52DA54BB10069CE3E /* RandomUserAppUITests.swift */; };
 		29F945B82DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945B72DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift */; };
 		29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C42DA5546C0069CE3E /* DetailsViewController.swift */; };
+		29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C62DA55E470069CE3E /* ApiClientTests.swift */; };
+		29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C82DA55EEC0069CE3E /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		29F945B52DA54BB10069CE3E /* RandomUserAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAppUITests.swift; sourceTree = "<group>"; };
 		29F945B72DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		29F945C42DA5546C0069CE3E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		29F945C62DA55E470069CE3E /* ApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTests.swift; sourceTree = "<group>"; };
+		29F945C82DA55EEC0069CE3E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				29F9459D2DA54BB10069CE3E /* Assets.xcassets */,
 				29F9459F2DA54BB10069CE3E /* LaunchScreen.storyboard */,
 				29F945A22DA54BB10069CE3E /* Info.plist */,
+				29F945C82DA55EEC0069CE3E /* ApiClient.swift */,
 			);
 			path = RandomUserApp;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				29F945AB2DA54BB10069CE3E /* RandomUserAppTests.swift */,
+				29F945C62DA55E470069CE3E /* ApiClientTests.swift */,
 			);
 			path = RandomUserAppTests;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				29F945952DA54BB00069CE3E /* AppDelegate.swift in Sources */,
 				29F945972DA54BB00069CE3E /* SceneDelegate.swift in Sources */,
 				29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */,
+				29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29F945AC2DA54BB10069CE3E /* RandomUserAppTests.swift in Sources */,
+				29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
