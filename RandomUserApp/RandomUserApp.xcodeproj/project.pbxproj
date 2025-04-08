@@ -20,7 +20,9 @@
 		29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C82DA55EEC0069CE3E /* ApiClient.swift */; };
 		29F945CB2DA561C30069CE3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CA2DA561C30069CE3E /* User.swift */; };
 		29F945CD2DA568FC0069CE3E /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */; };
-		29F945CF2DA56A560069CE3E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CE2DA56A560069CE3E /* URLSessionMock.swift */; };
+		29F945CF2DA56A560069CE3E /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */; };
+		29F945D22DA574670069CE3E /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D12DA574670069CE3E /* APIClientMock.swift */; };
+		29F945D42DA576F20069CE3E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D32DA576F20069CE3E /* RequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,10 @@
 		29F945C82DA55EEC0069CE3E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		29F945CA2DA561C30069CE3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
-		29F945CE2DA56A560069CE3E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
+		29F945D02DA5718C0069CE3E /* RandomUserApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RandomUserApp.xctestplan; sourceTree = "<group>"; };
+		29F945D12DA574670069CE3E /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		29F945D32DA576F20069CE3E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,7 @@
 		29F945882DA54BB00069CE3E = {
 			isa = PBXGroup;
 			children = (
+				29F945D02DA5718C0069CE3E /* RandomUserApp.xctestplan */,
 				29F945932DA54BB00069CE3E /* RandomUserApp */,
 				29F945AA2DA54BB10069CE3E /* RandomUserAppTests */,
 				29F945B42DA54BB10069CE3E /* RandomUserAppUITests */,
@@ -119,6 +125,7 @@
 				29F945C82DA55EEC0069CE3E /* ApiClient.swift */,
 				29F945CA2DA561C30069CE3E /* User.swift */,
 				29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */,
+				29F945D32DA576F20069CE3E /* RequestProtocol.swift */,
 			);
 			path = RandomUserApp;
 			sourceTree = "<group>";
@@ -128,7 +135,8 @@
 			children = (
 				29F945AB2DA54BB10069CE3E /* RandomUserAppTests.swift */,
 				29F945C62DA55E470069CE3E /* ApiClientTests.swift */,
-				29F945CE2DA56A560069CE3E /* URLSessionMock.swift */,
+				29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */,
+				29F945D12DA574670069CE3E /* APIClientMock.swift */,
 			);
 			path = RandomUserAppTests;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 				29F945CD2DA568FC0069CE3E /* URLSessionProtocol.swift in Sources */,
 				29F945992DA54BB00069CE3E /* MainViewController.swift in Sources */,
 				29F945952DA54BB00069CE3E /* AppDelegate.swift in Sources */,
+				29F945D42DA576F20069CE3E /* RequestProtocol.swift in Sources */,
 				29F945CB2DA561C30069CE3E /* User.swift in Sources */,
 				29F945972DA54BB00069CE3E /* SceneDelegate.swift in Sources */,
 				29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */,
@@ -286,7 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F945CF2DA56A560069CE3E /* URLSessionMock.swift in Sources */,
+				29F945CF2DA56A560069CE3E /* URLSessionProtocolMock.swift in Sources */,
+				29F945D22DA574670069CE3E /* APIClientMock.swift in Sources */,
 				29F945AC2DA54BB10069CE3E /* RandomUserAppTests.swift in Sources */,
 				29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */,
 			);
