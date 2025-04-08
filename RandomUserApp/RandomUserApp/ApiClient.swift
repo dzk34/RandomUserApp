@@ -8,5 +8,7 @@
 import Foundation
 
 struct ApiClient {
-    
+    func users() async throws [User] {
+        
+    }
 }
