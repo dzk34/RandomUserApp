@@ -17,7 +17,7 @@
 		29F945B82DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945B72DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift */; };
 		29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C42DA5546C0069CE3E /* DetailsViewController.swift */; };
 		29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C62DA55E470069CE3E /* ApiClientTests.swift */; };
-		29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C82DA55EEC0069CE3E /* ApiClient.swift */; };
+		29F945C92DA55EEC0069CE3E /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C82DA55EEC0069CE3E /* APIClientProtocol.swift */; };
 		29F945CB2DA561C30069CE3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CA2DA561C30069CE3E /* User.swift */; };
 		29F945CD2DA568FC0069CE3E /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */; };
 		29F945CF2DA56A560069CE3E /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */; };
@@ -26,6 +26,8 @@
 		29F945D72DA578AA0069CE3E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D62DA578AA0069CE3E /* APIConstants.swift */; };
 		29F945D92DA578E00069CE3E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D82DA578E00069CE3E /* NetworkError.swift */; };
 		29F945DB2DA57A860069CE3E /* RequestProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945DA2DA57A860069CE3E /* RequestProtocolMock.swift */; };
+		29F945E32DA5B76B0069CE3E /* RequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945E22DA5B76B0069CE3E /* RequestManagerProtocol.swift */; };
+		29F945E52DA5BC1B0069CE3E /* DataParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945E42DA5BC1B0069CE3E /* DataParserProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,7 @@
 		29F945B72DA54BB10069CE3E /* RandomUserAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		29F945C42DA5546C0069CE3E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		29F945C62DA55E470069CE3E /* ApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTests.swift; sourceTree = "<group>"; };
-		29F945C82DA55EEC0069CE3E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		29F945C82DA55EEC0069CE3E /* APIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
 		29F945CA2DA561C30069CE3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		29F945D62DA578AA0069CE3E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		29F945D82DA578E00069CE3E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		29F945DA2DA57A860069CE3E /* RequestProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocolMock.swift; sourceTree = "<group>"; };
+		29F945E22DA5B76B0069CE3E /* RequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerProtocol.swift; sourceTree = "<group>"; };
+		29F945E42DA5BC1B0069CE3E /* DataParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,20 +125,15 @@
 		29F945932DA54BB00069CE3E /* RandomUserApp */ = {
 			isa = PBXGroup;
 			children = (
-				29F945D52DA578990069CE3E /* Utils */,
+				29F945DF2DA589A30069CE3E /* Modules */,
+				29F945DE2DA589950069CE3E /* Common */,
+				29F945DD2DA589030069CE3E /* Services */,
+				29F945DC2DA585990069CE3E /* Models */,
 				29F945942DA54BB00069CE3E /* AppDelegate.swift */,
 				29F945962DA54BB00069CE3E /* SceneDelegate.swift */,
-				29F945982DA54BB00069CE3E /* MainViewController.swift */,
-				29F945C42DA5546C0069CE3E /* DetailsViewController.swift */,
 				29F9459D2DA54BB10069CE3E /* Assets.xcassets */,
 				29F9459F2DA54BB10069CE3E /* LaunchScreen.storyboard */,
 				29F945A22DA54BB10069CE3E /* Info.plist */,
-				29F945C82DA55EEC0069CE3E /* ApiClient.swift */,
-				29F945CA2DA561C30069CE3E /* User.swift */,
-				29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */,
-				29F945D32DA576F20069CE3E /* RequestProtocol.swift */,
-				29F945D62DA578AA0069CE3E /* APIConstants.swift */,
-				29F945D82DA578E00069CE3E /* NetworkError.swift */,
 			);
 			path = RandomUserApp;
 			sourceTree = "<group>";
@@ -160,11 +159,58 @@
 			path = RandomUserAppUITests;
 			sourceTree = "<group>";
 		};
-		29F945D52DA578990069CE3E /* Utils */ = {
+		29F945DC2DA585990069CE3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29F945CA2DA561C30069CE3E /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		29F945DD2DA589030069CE3E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				29F945C82DA55EEC0069CE3E /* APIClientProtocol.swift */,
+				29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */,
+				29F945D32DA576F20069CE3E /* RequestProtocol.swift */,
+				29F945D62DA578AA0069CE3E /* APIConstants.swift */,
+				29F945D82DA578E00069CE3E /* NetworkError.swift */,
+				29F945E22DA5B76B0069CE3E /* RequestManagerProtocol.swift */,
+				29F945E42DA5BC1B0069CE3E /* DataParserProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		29F945DE2DA589950069CE3E /* Common */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Utils;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		29F945DF2DA589A30069CE3E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				29F945E12DA589BD0069CE3E /* DetailsScreen */,
+				29F945E02DA589AD0069CE3E /* MainScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		29F945E02DA589AD0069CE3E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				29F945982DA54BB00069CE3E /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		29F945E12DA589BD0069CE3E /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				29F945C42DA5546C0069CE3E /* DetailsViewController.swift */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,8 +350,10 @@
 				29F945CB2DA561C30069CE3E /* User.swift in Sources */,
 				29F945D72DA578AA0069CE3E /* APIConstants.swift in Sources */,
 				29F945972DA54BB00069CE3E /* SceneDelegate.swift in Sources */,
+				29F945E32DA5B76B0069CE3E /* RequestManagerProtocol.swift in Sources */,
+				29F945E52DA5BC1B0069CE3E /* DataParserProtocol.swift in Sources */,
 				29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */,
-				29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */,
+				29F945C92DA55EEC0069CE3E /* APIClientProtocol.swift in Sources */,
 				29F945D92DA578E00069CE3E /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
