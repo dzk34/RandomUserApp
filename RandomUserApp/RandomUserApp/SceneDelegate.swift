@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         let viewModel = UsersListViewModel()
         let viewController = UsersListViewController(viewModel: viewModel)
+//        let viewController = UsersListViewController(viewModel: DependencyProvider.viewModel)
         window.rootViewController = UINavigationController(rootViewController: viewController)
         self.window = window
         window.makeKeyAndVisible()

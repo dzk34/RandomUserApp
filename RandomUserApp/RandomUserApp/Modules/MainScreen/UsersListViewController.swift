@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Combine
 
 class UsersListViewController: UIViewController {
-    let viewModel: UsersListViewModelProtocol
-    
-    init(viewModel: UsersListViewModelProtocol) {
+    private var cancellables: Set<AnyCancellable> = []
+
+    let viewModel: UsersListViewModel
+
+    init(viewModel: UsersListViewModel) {
         self.viewModel = viewModel
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +36,18 @@ class UsersListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        viewModel.$data
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+//                        DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+//                        }
+            }.store(in: &cancellables)
+        
+        Task {
+            await viewModel.fetch()
+        }
+
         setupUI()
         setupConstraints()
     }
@@ -56,20 +71,19 @@ extension UsersListViewController {
 
 extension UsersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        viewModel.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row)
+        cell.textLabel?.text = viewModel.data[indexPath.row]
         return cell
     }
 }
 
 extension UsersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("dzk")
-        let detailVC = DetailsViewController(data: String(indexPath.row))
+        let detailVC = DetailsViewController(data: viewModel.data[indexPath.row])
 //        navigationController?.pushViewController(detailVC, animated: true)
         show(detailVC, sender: self)
     }
