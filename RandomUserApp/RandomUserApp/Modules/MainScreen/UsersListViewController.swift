@@ -7,8 +7,19 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-    let data = ["day1", "day2", "day3", "day4", "day5", "day6", "day7"]
+class UsersListViewController: UIViewController {
+    let viewModel: UsersListViewModelProtocol
+    
+    init(viewModel: UsersListViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    let data = ["day1", "day2", "day3", "day4", "day5", "day6", "day7"]
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -28,7 +39,7 @@ class MainViewController: UIViewController {
 }
 
 // MARK: UI Setup
-extension MainViewController {
+extension UsersListViewController {
     func setupUI() {
         view.addSubview(tableView)
     }
@@ -43,22 +54,22 @@ extension MainViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource {
+extension UsersListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = String(indexPath.row)
         return cell
     }
 }
 
-extension MainViewController: UITableViewDelegate {
+extension UsersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("dzk")
-        let detailVC = DetailsViewController(data: data[indexPath.row])
+        let detailVC = DetailsViewController(data: String(indexPath.row))
 //        navigationController?.pushViewController(detailVC, animated: true)
         show(detailVC, sender: self)
     }

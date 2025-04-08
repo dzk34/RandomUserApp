@@ -8,7 +8,6 @@
 import Foundation
 
 protocol APIClientProtocol {
-//    func users() async throws -> [User]
     func perform(_ request: RequestProtocol) async throws -> Data
 }
 
@@ -22,10 +21,4 @@ class ApiClient: APIClientProtocol {
 
         return data
     }
-
-//    func users() async throws -> [User] {
-//        let (data, _) = try await session.data(from: URL(string: " https://randomuser.me")!, delegate: nil)
-//        
-//        return try JSONDecoder().decode([User].self, from: data)
-//    }
 }
