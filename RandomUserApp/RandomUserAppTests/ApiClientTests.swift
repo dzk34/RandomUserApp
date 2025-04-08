@@ -19,6 +19,7 @@ final class ApiClientTests: XCTestCase {
         let apiClient = ApiClient()
         let users = try await apiClient.users()
         
-        XCTAssert(users.first?.name == "")
+        let firstUser = try XCTUnwrap(users.first)
+        XCTAssertEqual(firstUser.name, "Username")
     }
 }

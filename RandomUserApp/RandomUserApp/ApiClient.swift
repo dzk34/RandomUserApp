@@ -9,6 +9,6 @@ import Foundation
 
 struct ApiClient {
     func users() async throws -> [User] {
-        return []
+        return [User(name: "Username")]
     }
 }
