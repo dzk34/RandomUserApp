@@ -18,6 +18,7 @@
 		29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C42DA5546C0069CE3E /* DetailsViewController.swift */; };
 		29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C62DA55E470069CE3E /* ApiClientTests.swift */; };
 		29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945C82DA55EEC0069CE3E /* ApiClient.swift */; };
+		29F945CB2DA561C30069CE3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945CA2DA561C30069CE3E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		29F945C42DA5546C0069CE3E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		29F945C62DA55E470069CE3E /* ApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTests.swift; sourceTree = "<group>"; };
 		29F945C82DA55EEC0069CE3E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		29F945CA2DA561C30069CE3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				29F9459F2DA54BB10069CE3E /* LaunchScreen.storyboard */,
 				29F945A22DA54BB10069CE3E /* Info.plist */,
 				29F945C82DA55EEC0069CE3E /* ApiClient.swift */,
+				29F945CA2DA561C30069CE3E /* User.swift */,
 			);
 			path = RandomUserApp;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				29F945992DA54BB00069CE3E /* MainViewController.swift in Sources */,
 				29F945952DA54BB00069CE3E /* AppDelegate.swift in Sources */,
+				29F945CB2DA561C30069CE3E /* User.swift in Sources */,
 				29F945972DA54BB00069CE3E /* SceneDelegate.swift in Sources */,
 				29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */,
 				29F945C92DA55EEC0069CE3E /* ApiClient.swift in Sources */,
