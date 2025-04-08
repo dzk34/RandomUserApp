@@ -25,6 +25,7 @@
 		29F945D42DA576F20069CE3E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D32DA576F20069CE3E /* RequestProtocol.swift */; };
 		29F945D72DA578AA0069CE3E /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D62DA578AA0069CE3E /* APIConstants.swift */; };
 		29F945D92DA578E00069CE3E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945D82DA578E00069CE3E /* NetworkError.swift */; };
+		29F945DB2DA57A860069CE3E /* RequestProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945DA2DA57A860069CE3E /* RequestProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		29F945D32DA576F20069CE3E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		29F945D62DA578AA0069CE3E /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		29F945D82DA578E00069CE3E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		29F945DA2DA57A860069CE3E /* RequestProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				29F945C62DA55E470069CE3E /* ApiClientTests.swift */,
 				29F945CE2DA56A560069CE3E /* URLSessionProtocolMock.swift */,
 				29F945D12DA574670069CE3E /* APIClientMock.swift */,
+				29F945DA2DA57A860069CE3E /* RequestProtocolMock.swift */,
 			);
 			path = RandomUserAppTests;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29F945CF2DA56A560069CE3E /* URLSessionProtocolMock.swift in Sources */,
+				29F945DB2DA57A860069CE3E /* RequestProtocolMock.swift in Sources */,
 				29F945D22DA574670069CE3E /* APIClientMock.swift in Sources */,
 				29F945AC2DA54BB10069CE3E /* RandomUserAppTests.swift in Sources */,
 				29F945C72DA55E470069CE3E /* ApiClientTests.swift in Sources */,

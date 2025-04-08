@@ -8,6 +8,6 @@
 import Foundation
 
 enum APIConstants {
-    static let host = "gitlab.com"
+    static let host = "randomuser.me"
     static let scheme = "https"
 }

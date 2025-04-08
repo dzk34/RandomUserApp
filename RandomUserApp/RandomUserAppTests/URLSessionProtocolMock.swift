@@ -29,6 +29,20 @@ class URLSessionProtocolMock: URLSessionProtocol {
         
         return (data, response)
     }
+    
+    func data(for request: URLRequest) async throws -> (Data, URLResponse) {
+        guard let url = request.url, let response = HTTPURLResponse(url: url,
+                                       statusCode: 200,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        else {
+            fatalError()
+        }
+
+        dataURL = url
+
+        return (data, response)
+    }
 }
 
 extension URLSessionProtocolMock {

@@ -27,21 +27,22 @@ final class ApiClientTests: XCTestCase {
         sut = nil
     }
     
-    // to avoid the error about the async call (of apiClient.users())  in a function that does not support concurrency, we can do:
-    // - wrap the call 'try await apiClient.users()' into a Task
+    // to avoid the error about the async call (of sut.perform())  in a function that does not support concurrency, we can do:
+    // - wrap the call 'try await sut.perform()' into a Task
     // - Or mark the test method as async
     
     // we can either use a 'do catch' block, or use the 'throws' keyword which means when there's an error thrown, this tests fails
-    func  test_shouldReturnListOfUsers() async throws {
-        let users = try await sut.users()
-        
-        let firstUser = try XCTUnwrap(users.first)
-        XCTAssertEqual(firstUser.name, "Username")
-    }
-    
     func test_performRequest_shouldReturnData() async throws {
-        let request = RequestMock.products
+        let request = RequestProtocolMock.users
         let data = try await sut.perform(request)
         XCTAssertNotNil(data)
+    }
+    
+    func test_products_shouldFetchFromCorrectURL() async throws {
+        let request = RequestProtocolMock.users
+        _ = try await sut.perform(request)
+
+        let expectedURL = try XCTUnwrap(URL(string: "https://randomuser.me/api"))
+        XCTAssertEqual(sessionMock.dataURL, expectedURL)
     }
 }
