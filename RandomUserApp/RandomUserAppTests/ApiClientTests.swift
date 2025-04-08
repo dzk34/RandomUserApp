@@ -40,7 +40,8 @@ final class ApiClientTests: XCTestCase {
     }
     
     func test_performRequest_shouldReturnData() async throws {
-        let data = try await sut.users()
+        let request = RequestMock.products
+        let data = try await sut.perform(request)
         XCTAssertNotNil(data)
     }
 }
