@@ -12,18 +12,10 @@ protocol RequestManagerProtocol {
 }
 
 class RequestManager: RequestManagerProtocol, ObservableObject {
-    let apiClient: APIClientProtocol
-    let dataParser: DataParserProtocol
-    
-    init(apiClient: APIClientProtocol, dataParser: DataParserProtocol) {
-        self.apiClient = apiClient
-        self.dataParser = dataParser
-    }
-    
-//    let dataParser: APIClientProtocol = ApiClient()
+    @Inject(\.apiClient) var apiClient: APIClientProtocol
+    @Inject(\.dataParser) var dataParser: DataParserProtocol
 
     func perform<T>(_ request: RequestProtocol) async throws -> T where T : Decodable {
-        
         let data = try await apiClient.perform(request)
         
         let decoded: T = try dataParser.parse(data: data)

@@ -8,15 +8,24 @@
 import Foundation
 
 protocol UsersListViewModelProtocol {
-//    var dataPublisher: Published<[String]>.Publisher { get }
-    func fetch() async
+    var dataPublisher: Published<[User]>.Publisher { get }
+    func fetchData() async
 }
 
 class UsersListViewModel: ObservableObject, UsersListViewModelProtocol {
-//    var dataPublisher: Published<[String]>.Publisher { $data }
-    @Published private(set) var data: [String] = []
+    var dataPublisher: Published<[User]>.Publisher { $data }
+    @Published private(set) var data: [User] = []
+    
+    @Inject(\.requestManager) var requestManager: RequestManagerProtocol
 
-    func fetch() async {
-        data = ["day1", "day2", "day3", "day4", "day5", "day6", "day7"]
+    func fetchData() async {
+        do {
+            let requestData = UsersRequest.users
+            let users: UserList = try await requestManager.perform(requestData)
+            self.data = users.results
+        } catch {
+//            App.State.unknown
+            print("dzk \(error)")
+        }
     }
 }

@@ -25,7 +25,8 @@ extension RequestProtocol {
         components.scheme = scheme
         components.host = host
         components.path = path
-        
+        components.queryItems = [URLQueryItem(name: "results", value: "10")]
+
         guard let url = components.url else { throw NetworkError.invalidUrl }
 
         return URLRequest(url: url)

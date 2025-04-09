@@ -16,7 +16,7 @@ struct User: Codable {
     let gender: String
     let location: Location
     let email: String
-    let loign: Login
+    let login: Login
     let dob: DateOfBirth
     let registered: Registration
     let phone: String
@@ -37,7 +37,7 @@ struct Location: Codable {
     let city: String
     let state: String
     let country: String
-    let postcode: Int
+    let postcode: Postcode
     let coordinates: Coordinates
     let timezone: TimeZone
 
@@ -48,9 +48,37 @@ struct Street: Codable {
     let name: String
 }
 
+enum Postcode: Codable {
+    case integer(Int)
+    case string(String)
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let x = try? container.decode(Int.self) {
+            self = .integer(x)
+            return
+        }
+        if let x = try? container.decode(String.self) {
+            self = .string(x)
+            return
+        }
+        throw DecodingError.typeMismatch(Postcode.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Postcode"))
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .integer(let x):
+            try container.encode(x)
+        case .string(let x):
+            try container.encode(x)
+        }
+    }
+}
+
 struct Coordinates: Codable {
-    let latitude: Double
-    let longitude: Double
+    let latitude: String
+    let longitude: String
 }
 
 struct TimeZone: Codable {
@@ -69,12 +97,12 @@ struct Login: Codable {
 }
 
 struct DateOfBirth: Codable {
-    let date: Date
+    let date: String
     let age: Int
 }
 
 struct Registration: Codable {
-    let date: Date
+    let date: String
     let age: Int
 }
 

@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class DetailsViewController: UIViewController {
-    let data: String
+    let data: User
     
-    init(data: String) {
+    init(data: User) {
         self.data = data
         super.init(nibName: nil, bundle: nil)
     }
@@ -22,6 +22,6 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("received data = \(data)")
+        print("received data = \(data.name.first)")
     }
 }

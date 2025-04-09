@@ -30,6 +30,8 @@
 		29F945E52DA5BC1B0069CE3E /* DataParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945E42DA5BC1B0069CE3E /* DataParserProtocol.swift */; };
 		29F945E72DA5C0C40069CE3E /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945E62DA5C0C40069CE3E /* UsersListViewModel.swift */; };
 		29F945EA2DA5C3A20069CE3E /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945E92DA5C3A20069CE3E /* DependencyProvider.swift */; };
+		29F945EC2DA647DF0069CE3E /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945EB2DA647DF0069CE3E /* ServiceContainer.swift */; };
+		29F945EE2DA648120069CE3E /* ServiceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F945ED2DA648120069CE3E /* ServiceInjection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		29F945E42DA5BC1B0069CE3E /* DataParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserProtocol.swift; sourceTree = "<group>"; };
 		29F945E62DA5C0C40069CE3E /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		29F945E92DA5C3A20069CE3E /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		29F945EB2DA647DF0069CE3E /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		29F945ED2DA648120069CE3E /* ServiceInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInjection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +178,7 @@
 		29F945DD2DA589030069CE3E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				29F945E82DA5C3730069CE3E /* New Group */,
+				29F945E82DA5C3730069CE3E /* Dependencies */,
 				29F945C82DA55EEC0069CE3E /* APIClientProtocol.swift */,
 				29F945CC2DA568FC0069CE3E /* URLSessionProtocol.swift */,
 				29F945D32DA576F20069CE3E /* RequestProtocol.swift */,
@@ -220,11 +224,13 @@
 			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
-		29F945E82DA5C3730069CE3E /* New Group */ = {
+		29F945E82DA5C3730069CE3E /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				29F945EB2DA647DF0069CE3E /* ServiceContainer.swift */,
+				29F945ED2DA648120069CE3E /* ServiceInjection.swift */,
 			);
-			path = "New Group";
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,10 +368,12 @@
 				29F945952DA54BB00069CE3E /* AppDelegate.swift in Sources */,
 				29F945D42DA576F20069CE3E /* RequestProtocol.swift in Sources */,
 				29F945CB2DA561C30069CE3E /* User.swift in Sources */,
+				29F945EE2DA648120069CE3E /* ServiceInjection.swift in Sources */,
 				29F945D72DA578AA0069CE3E /* APIConstants.swift in Sources */,
 				29F945972DA54BB00069CE3E /* SceneDelegate.swift in Sources */,
 				29F945EA2DA5C3A20069CE3E /* DependencyProvider.swift in Sources */,
 				29F945E32DA5B76B0069CE3E /* RequestManagerProtocol.swift in Sources */,
+				29F945EC2DA647DF0069CE3E /* ServiceContainer.swift in Sources */,
 				29F945E52DA5BC1B0069CE3E /* DataParserProtocol.swift in Sources */,
 				29F945E72DA5C0C40069CE3E /* UsersListViewModel.swift in Sources */,
 				29F945C52DA5546C0069CE3E /* DetailsViewController.swift in Sources */,
